@@ -1,0 +1,16 @@
+# Rust
+target
+**/*.rs.bk
+Cargo.lock
+bin
+pkg
+wasm-pack.log
+wasm-build
+
+# Web
+node_modules
+dist
+build
+
+# misc
+.DS_Store
