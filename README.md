@@ -143,10 +143,10 @@ npm add gh-pages
 - Add homepage in package.json
 ```
 "version": "0.1.0",
-  "homepage": https://github.com/A14Narriaga/langtons-ant",
+  "homepage": "https://github.com/A14Narriaga/langtons-ant",
   "dependencies": {
 ```
--- Deploy app
+- Deploy app
 ```
 npm run predeploy
 npm run deploy
