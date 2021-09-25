@@ -2,9 +2,9 @@
 - [Install npm](https://www.npmjs.com/get-npm)
 - [Install cargo](https://doc.rust-lang.org/cargo/getting-started/installation.html)
 
-# Create App
+## Create App
 
-## Create directories
+#### Create directories
 - Create app directory
 ```
 mkdir <app_name>
@@ -18,7 +18,7 @@ npx yarn create react-app react --template typescript
 cargo new rust
 ```
 
-## Inside RUST App
+#### Inside RUST App
 - Install wasm-pack
 ```
 npm i wasm-pack
@@ -60,7 +60,7 @@ pub fn add_two_ints(a: u32, b:u32) -> u32 {
 }
 ```
 
-## Inside REACT App
+#### Inside REACT App
 - Install App Rewired
 ```
 npm i react-app-rewired --save-dev
@@ -112,17 +112,17 @@ module.exports = function override(config, env) {
 npm i
 ```
 
-## Compilation in RUST
+#### Compilation in RUST
 ```
 npx wasm-pack build --out-dir ./pkg
 ```
 
-## Start REACT App
+#### Start REACT App
 ```
 npm run start
 ```
 
-# Clone App
+## Clone App
 
 - Inside de RUST App
 ```
@@ -152,6 +152,6 @@ npm run predeploy
 npm run deploy
 ```
 
-# References
+## References
 - [Rust and React](https://medium.com/swlh/intro-to-webassembly-in-react-with-rust-d067408231b9)
 - [Config overrides](https://github.com/timarney/react-app-rewired)
