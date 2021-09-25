@@ -7,13 +7,13 @@ const Footer = () => {
       <section className="footer-container">
         <h3>By Alan Arriaga</h3>
         <div className="options">
-          <a href="https://github.com/A14Narriaga">
+          <a href="https://github.com/A14Narriaga" target="blank">
             <AiFillGithub />
           </a>
-          <a href="https://a14narriaga.netlify.app/">
+          <a href="https://a14narriaga.netlify.app/" target="blank">
             <FaUserCircle />
           </a>
-          <a href="https://twitter.com/A14Narriaga">
+          <a href="https://twitter.com/A14Narriaga" target="blank">
             <AiOutlineTwitter />
           </a>
         </div>

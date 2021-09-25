@@ -135,6 +135,23 @@ npm i
 npm run start
 ```
 
+## Add deploy with GitHub
+- Add github pages interaction
+```
+npm add gh-pages
+```
+- Add homepage in package.json
+```
+"version": "0.1.0",
+  "homepage": https://github.com/A14Narriaga/langtons-ant",
+  "dependencies": {
+```
+-- Deploy app
+```
+npm run predeploy
+npm run deploy
+```
+
 # References
 - [Rust and React](https://medium.com/swlh/intro-to-webassembly-in-react-with-rust-d067408231b9)
 - [Config overrides](https://github.com/timarney/react-app-rewired)
