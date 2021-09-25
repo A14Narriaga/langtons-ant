@@ -1,7 +1,7 @@
 {
   "name": "langtons-ant",
   "version": "0.1.0",
-  "homepage": "https://github.com/A14Narriaga/langtons-ant",
+  "homepage": "https://a14narriaga.github.io/langtons-ant",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",

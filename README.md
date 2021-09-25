@@ -138,17 +138,20 @@ npm run start
 ## Add deploy with GitHub
 - Add github pages interaction
 ```
+npm install --save gh-pages
 npm add gh-pages
 ```
-- Add homepage in package.json
+- Add homepage in package.json with the URL deployment by github
 ```
 "version": "0.1.0",
-  "homepage": "https://github.com/A14Narriaga/langtons-ant",
+  "homepage": "https://a14narriaga.github.io/langtons-ant",
   "dependencies": {
 ```
 - Deploy app
 ```
 npm run predeploy
+npm install -g serve
+npx serve -s build
 npm run deploy
 ```
 
