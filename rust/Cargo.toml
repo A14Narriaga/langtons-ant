@@ -1,7 +1,7 @@
 [package]
-name = "algorithm"
+name = "langtons-ant-algorithm"
 version = "0.1.0"
-authors = ["A14Narriaga <a14.arriaga@gmail.com>"]
+authors = ["A14Narriaga <a14n.arriaga@gmail.com>"]
 edition = "2018"
 
 [lib]

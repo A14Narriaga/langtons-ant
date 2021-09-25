@@ -1,4 +1,4 @@
-# Rust
+# rust
 target
 **/*.rs.bk
 Cargo.lock
@@ -7,7 +7,7 @@ pkg
 wasm-pack.log
 wasm-build
 
-# Web
+# react
 node_modules
 dist
 build
