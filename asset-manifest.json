@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/GameOfLife/static/css/main.9bb0ebf1.chunk.css",
-    "main.js": "/GameOfLife/static/js/main.ce0851a9.chunk.js",
-    "main.js.map": "/GameOfLife/static/js/main.ce0851a9.chunk.js.map",
-    "runtime-main.js": "/GameOfLife/static/js/runtime-main.03c57b8c.js",
-    "runtime-main.js.map": "/GameOfLife/static/js/runtime-main.03c57b8c.js.map",
-    "static/js/2.585b6426.chunk.js": "/GameOfLife/static/js/2.585b6426.chunk.js",
-    "static/js/2.585b6426.chunk.js.map": "/GameOfLife/static/js/2.585b6426.chunk.js.map",
-    "static/js/3.d08de9a5.chunk.js": "/GameOfLife/static/js/3.d08de9a5.chunk.js",
-    "adc1cb092f523b84ad7d.module.wasm": "/GameOfLife/adc1cb092f523b84ad7d.module.wasm",
-    "static/js/3.d08de9a5.chunk.js.map": "/GameOfLife/static/js/3.d08de9a5.chunk.js.map",
-    "index.html": "/GameOfLife/index.html",
-    "static/css/main.9bb0ebf1.chunk.css.map": "/GameOfLife/static/css/main.9bb0ebf1.chunk.css.map",
-    "static/js/2.585b6426.chunk.js.LICENSE.txt": "/GameOfLife/static/js/2.585b6426.chunk.js.LICENSE.txt"
+    "main.css": "/A14Narriaga/langtons-ant/static/css/main.9bb0ebf1.chunk.css",
+    "main.js": "/A14Narriaga/langtons-ant/static/js/main.ce0851a9.chunk.js",
+    "main.js.map": "/A14Narriaga/langtons-ant/static/js/main.ce0851a9.chunk.js.map",
+    "runtime-main.js": "/A14Narriaga/langtons-ant/static/js/runtime-main.8cd416d5.js",
+    "runtime-main.js.map": "/A14Narriaga/langtons-ant/static/js/runtime-main.8cd416d5.js.map",
+    "static/js/2.585b6426.chunk.js": "/A14Narriaga/langtons-ant/static/js/2.585b6426.chunk.js",
+    "static/js/2.585b6426.chunk.js.map": "/A14Narriaga/langtons-ant/static/js/2.585b6426.chunk.js.map",
+    "static/js/3.d08de9a5.chunk.js": "/A14Narriaga/langtons-ant/static/js/3.d08de9a5.chunk.js",
+    "adc1cb092f523b84ad7d.module.wasm": "/A14Narriaga/langtons-ant/adc1cb092f523b84ad7d.module.wasm",
+    "static/js/3.d08de9a5.chunk.js.map": "/A14Narriaga/langtons-ant/static/js/3.d08de9a5.chunk.js.map",
+    "index.html": "/A14Narriaga/langtons-ant/index.html",
+    "static/css/main.9bb0ebf1.chunk.css.map": "/A14Narriaga/langtons-ant/static/css/main.9bb0ebf1.chunk.css.map",
+    "static/js/2.585b6426.chunk.js.LICENSE.txt": "/A14Narriaga/langtons-ant/static/js/2.585b6426.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.03c57b8c.js",
+    "static/js/runtime-main.8cd416d5.js",
     "static/js/2.585b6426.chunk.js",
     "static/css/main.9bb0ebf1.chunk.css",
     "static/js/main.ce0851a9.chunk.js"
