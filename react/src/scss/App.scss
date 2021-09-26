@@ -25,10 +25,3 @@ body {
     flex-direction: column;
   }
 }
-
-@media (max-width: 1037px) {
-  .game-wrapper {
-    overflow-y: hidden;
-    overflow-x: scroll;
-  }
-}

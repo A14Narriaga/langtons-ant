@@ -1,14 +1,14 @@
 import { useEffect } from "react"
 
-// rows = x = w
-// cols = y = h
+// cols = x = w
+// rows = y = h
 
 const canvasW = 900
 const canvasH = 900
 let canvas: HTMLCanvasElement
 let context: CanvasRenderingContext2D
-const rows = 70
-const cols = 70
+const cols = 1000
+const rows = 1000
 let board: Array<Array<Cell>>
 let cellH: number
 let cellW: number
@@ -19,8 +19,8 @@ const cleanBoard = () => {
 }
 
 const paintBoard = () => {
-  for (let x = 0; x < rows; x++) {
-    for (let y = 0; y < cols; y++) {
+  for (let x = 0; x < cols; x++) {
+    for (let y = 0; y < rows; y++) {
       board[x][y].paint()
     }
   }
@@ -33,15 +33,15 @@ const reloadBoard = () => {
 }
 
 const loadBoard = () => {
-  for (let x = 0; x < rows; x++) {
-    for (let y = 0; y < cols; y++) {
+  for (let x = 0; x < cols; x++) {
+    for (let y = 0; y < rows; y++) {
       // const state = Math.floor(Math.random() * 2)
       const state = y % 2 === 0 ? (x % 2 === 0 ? 0 : 1) : x % 2 === 0 ? 1 : 0
       board[x][y] = new Cell(x, y, state)
     }
   }
-  for (let x = 0; x < rows; x++) {
-    for (let y = 0; y < cols; y++) {
+  for (let x = 0; x < cols; x++) {
+    for (let y = 0; y < rows; y++) {
       board[x][y].getNeighbors()
     }
   }
@@ -52,11 +52,12 @@ const loadGame = ({ fps }: { fps: number }) => {
   context = canvas.getContext("2d") as CanvasRenderingContext2D
   canvas.width = canvasW
   canvas.height = canvasH
-  cellW = Math.ceil(canvasW / rows)
-  cellH = Math.ceil(canvasH / cols)
-  board = Array.from(new Array(rows)).map(row => new Array(cols)) as Array<Array<Cell>>
+  cellW = Math.ceil(canvasW / cols)
+  cellH = Math.ceil(canvasH / rows)
+  board = Array.from(new Array(cols)).map(row => new Array(rows)) as Array<Array<Cell>>
   loadBoard()
-  setInterval(() => reloadBoard(), 1000 / fps)
+  paintBoard()
+  //setInterval(() => reloadBoard(), 1000 / fps)
 }
 
 class Cell {
@@ -77,8 +78,8 @@ class Cell {
     for (const dx of moveAxis) {
       for (const dy of moveAxis) {
         if (dx === 0 && dy === 0) continue
-        const neighborX = (this.x + dx + rows) % rows
-        const neighborY = (this.y + dy + cols) % cols
+        const neighborX = (this.x + dx + cols) % cols
+        const neighborY = (this.y + dy + rows) % rows
         this.neighbors.push(board[neighborX]?.[neighborY])
       }
     }
