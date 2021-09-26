@@ -1,11 +1,9 @@
 import { useEffect } from "react"
 
-const width = 300
-const height = 300
 const cellSize = 5
 let cellSpace = cellSize + 1
-const cols = 10
-const rows = 10
+const cols = 1000
+const rows = 1000
 let canvas: HTMLCanvasElement
 let context: CanvasRenderingContext2D
 let board: Array<Array<Cell>>
@@ -33,8 +31,8 @@ class Cell {
 const loadGame = () => {
   canvas = document.getElementById("canvas") as HTMLCanvasElement
   context = canvas.getContext("2d") as CanvasRenderingContext2D
-  canvas.width = cellSpace * width
-  canvas.height = cellSpace * height
+  canvas.width = cellSpace * cols + 1
+  canvas.height = cellSpace * rows + 1
   board = Array.from(new Array(cols)).map(row => new Array(rows)) as Array<Array<Cell>>
   for (let x = 0; x < cols; x++) {
     for (let y = 0; y < rows; y++) {
