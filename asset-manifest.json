@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/langtons-ant/static/css/main.dbff90ba.chunk.css",
-    "main.js": "/langtons-ant/static/js/main.8605f6de.chunk.js",
-    "main.js.map": "/langtons-ant/static/js/main.8605f6de.chunk.js.map",
+    "main.js": "/langtons-ant/static/js/main.8da363c7.chunk.js",
+    "main.js.map": "/langtons-ant/static/js/main.8da363c7.chunk.js.map",
     "runtime-main.js": "/langtons-ant/static/js/runtime-main.5fbdce48.js",
     "runtime-main.js.map": "/langtons-ant/static/js/runtime-main.5fbdce48.js.map",
     "static/js/2.782960a6.chunk.js": "/langtons-ant/static/js/2.782960a6.chunk.js",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.5fbdce48.js",
     "static/js/2.782960a6.chunk.js",
     "static/css/main.dbff90ba.chunk.css",
-    "static/js/main.8605f6de.chunk.js"
+    "static/js/main.8da363c7.chunk.js"
   ]
 }
