@@ -150,8 +150,6 @@ npm add gh-pages
 - Deploy app
 ```
 npm run predeploy
-npm install -g serve
-npx serve -s build
 npm run deploy
 ```
 

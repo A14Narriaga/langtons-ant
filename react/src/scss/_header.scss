@@ -2,26 +2,26 @@
   header {
     max-width: 1024px;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 1rem 2rem;
     .header-container {
       display: flex;
       justify-content: space-between;
       align-items: center;
       color: $text-color;
       h1 {
-        font-size: 2.3rem;
+        font-size: 2.2rem;
         letter-spacing: 1px;
       }
       .options {
         list-style: none;
         display: flex;
         li {
-          padding: 0.5rem;
+          padding: 0.4rem;
           background-color: $text-color;
           border: 1px solid $backgroung-color;
           display: flex;
           border-radius: 50%;
-          margin-left: 0.5rem;
+          margin-left: 0.4rem;
           position: relative;
           cursor: pointer;
           &:before {
@@ -33,7 +33,7 @@
             left: 0;
             background-color: $backgroung-color;
             border-radius: 50%;
-            transition: all 0.3s linear;
+            transition: all 0.2s linear;
             transform: scale(0);
             opacity: 0;
           }
@@ -47,11 +47,11 @@
           }
           a {
             color: $backgroung-color;
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             display: flex;
             justify-content: center;
             align-items: center;
-            transition: all 0.3s linear;
+            transition: all 0.2s linear;
             z-index: 0;
           }
         }

@@ -1,8 +1,14 @@
-import { GoGraph } from "react-icons/go"
-import { FaRegEdit, FaRegPlayCircle } from "react-icons/fa"
+import { useState } from "react"
+import { FaRegEdit, FaRegPlayCircle, FaRegPauseCircle } from "react-icons/fa"
+import { BiZoomIn, BiZoomOut } from "react-icons/bi"
 import { HiOutlineFolderDownload } from "react-icons/hi"
+import { AiOutlineAreaChart, AiOutlineReload } from "react-icons/ai"
+import { GiAnt } from "react-icons/gi"
 
 const Header = () => {
+  const [isRunning, setIsRunning] = useState(true)
+  const togglePlayBtn = () => (isRunning ? setIsRunning(false) : setIsRunning(true))
+
   return (
     <header>
       <section className="header-container">
@@ -10,7 +16,25 @@ const Header = () => {
         <div className="options">
           <li>
             <a href="#!">
-              <FaRegPlayCircle />
+              <AiOutlineReload />
+            </a>
+          </li>
+          <li onClick={togglePlayBtn}>
+            <a href="#!">{isRunning ? <FaRegPauseCircle /> : <FaRegPlayCircle />}</a>
+          </li>
+          <li>
+            <a href="#!">
+              <BiZoomIn />
+            </a>
+          </li>
+          <li>
+            <a href="#!">
+              <BiZoomOut />
+            </a>
+          </li>
+          <li>
+            <a href="#!">
+              <GiAnt />
             </a>
           </li>
           <li>
@@ -25,7 +49,7 @@ const Header = () => {
           </li>
           <li>
             <a href="#!">
-              <GoGraph />
+              <AiOutlineAreaChart />
             </a>
           </li>
         </div>

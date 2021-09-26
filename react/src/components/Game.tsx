@@ -3,8 +3,8 @@ import { useEffect } from "react"
 // rows = x = w
 // cols = y = h
 
-const canvasW = 944
-const canvasH = 464
+const canvasW = 900
+const canvasH = 900
 let canvas: HTMLCanvasElement
 let context: CanvasRenderingContext2D
 const rows = 70
@@ -85,7 +85,7 @@ class Cell {
   }
   paint = () => {
     if (context !== null) {
-      context.fillStyle = this.state === 1 ? "#FFFFFF" : "#000000"
+      context.fillStyle = this.state === 1 ? "#E1EA7F" : "#1484AC"
       context.fillRect(this.x * cellW, this.y * cellH, cellW, cellH)
     }
   }

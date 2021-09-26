@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@500&display=swap');
 @import "./header";
 @import "./game";
 @import "./footer";
@@ -10,7 +10,7 @@ $text-color: rgb(197, 197, 197);
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Varela Round", sans-serif;
+  font-family: "Baloo Paaji 2", monospace;
 }
 
 body {
@@ -20,7 +20,7 @@ body {
   @include footer;
 }
 
-@media (max-width: 485px) {
+@media (max-width: 640px) {
   .header-container {
     flex-direction: column;
   }
