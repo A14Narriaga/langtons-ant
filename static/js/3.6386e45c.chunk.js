@@ -1,0 +1,2 @@
+(this["webpackJsonplangtons-ant"]=this["webpackJsonplangtons-ant"]||[]).push([[3],{21:function(n,t,s){"use strict";var a=s.w[n.i];n.exports=a,a.b()},22:function(n,t,s){"use strict";s.r(t),s.d(t,"add_two_ints",(function(){return i}));var a=s(21);function i(n,t){return a.a(n,t)>>>0}}}]);
+//# sourceMappingURL=3.6386e45c.chunk.js.map
