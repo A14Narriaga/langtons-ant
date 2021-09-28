@@ -1,8 +1,11 @@
 import { useEffect } from "react"
+// import { memory } from "langtons-ant-algorithm/langtons_ant_algorithm_bg.wasm";
+// import { Grid } from "langtons-ant-algorithm";
 
 const cols = 207
-const rows = 100
+const rows = 107
 const space = 0.5;
+// let grid: Grid
 let canvas: HTMLCanvasElement
 let context: CanvasRenderingContext2D
 let board: Array<Array<number>>

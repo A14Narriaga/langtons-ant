@@ -1,15 +1,9 @@
 import { useReducer } from "react"
-// import { memory } from "langtons-ant-algorithm/langtons_ant_algorithm_bg.wasm";
-// import { Universe, Cell } from "langtons-ant-algorithm";
+
 import "../scss/App.scss"
 import Footer from "./Footer"
-import Grid from "./Grid"
+import Board from "./Board"
 import Header from "./Header"
-
-import("langtons-ant-algorithm").then(({ add_two_ints }) => {
-  const sumResult = add_two_ints(100, 20)
-  console.log("Sum", sumResult)
-})
 
 function reducerCellSize(state: any, actions: any) {
   switch (actions.type) {
@@ -28,7 +22,7 @@ const App = () => {
   return (
     <>
       <Header dispatchCellSize={dispatchCellSize} />
-      <Grid stateCellSize={stateCellSize} />
+      <Board stateCellSize={stateCellSize} />
       <Footer />
     </>
   )
