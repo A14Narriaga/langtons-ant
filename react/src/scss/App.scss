@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@500&display=swap');
 @import "./header";
-@import "./game";
+@import "./grid";
 @import "./footer";
 
 $backgroung-color: #00445e;
@@ -16,7 +16,7 @@ $text-color: rgb(197, 197, 197);
 body {
   background: $backgroung-color;
   @include header;
-  @include game;
+  @include grid;
   @include footer;
 }
 

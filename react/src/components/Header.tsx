@@ -5,7 +5,7 @@ import { HiOutlineFolderDownload } from "react-icons/hi"
 import { AiOutlineAreaChart, AiOutlineReload } from "react-icons/ai"
 import { GiAnt } from "react-icons/gi"
 
-const Header = () => {
+const Header = ({ dispatchCellSize }: { dispatchCellSize: any }) => {
   const [isRunning, setIsRunning] = useState(true)
   const togglePlayBtn = () => (isRunning ? setIsRunning(false) : setIsRunning(true))
 
@@ -22,12 +22,12 @@ const Header = () => {
           <li onClick={togglePlayBtn}>
             <a href="#!">{isRunning ? <FaRegPauseCircle /> : <FaRegPlayCircle />}</a>
           </li>
-          <li>
+          <li onClick={() => dispatchCellSize({type: 'zoomIn'})}>
             <a href="#!">
               <BiZoomIn />
             </a>
           </li>
-          <li>
+          <li onClick={() => dispatchCellSize({type: 'zoomOut'})}>
             <a href="#!">
               <BiZoomOut />
             </a>
