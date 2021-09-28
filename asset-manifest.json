@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/langtons-ant/static/css/main.dbff90ba.chunk.css",
-    "main.js": "/langtons-ant/static/js/main.8da363c7.chunk.js",
-    "main.js.map": "/langtons-ant/static/js/main.8da363c7.chunk.js.map",
-    "runtime-main.js": "/langtons-ant/static/js/runtime-main.5fbdce48.js",
-    "runtime-main.js.map": "/langtons-ant/static/js/runtime-main.5fbdce48.js.map",
-    "static/js/2.782960a6.chunk.js": "/langtons-ant/static/js/2.782960a6.chunk.js",
-    "static/js/2.782960a6.chunk.js.map": "/langtons-ant/static/js/2.782960a6.chunk.js.map",
-    "static/js/3.be1f8b4c.chunk.js": "/langtons-ant/static/js/3.be1f8b4c.chunk.js",
-    "8cd1aafe11884a1b88c1.module.wasm": "/langtons-ant/8cd1aafe11884a1b88c1.module.wasm",
-    "static/js/3.be1f8b4c.chunk.js.map": "/langtons-ant/static/js/3.be1f8b4c.chunk.js.map",
+    "main.css": "/langtons-ant/static/css/main.2c8da082.chunk.css",
+    "main.js": "/langtons-ant/static/js/main.10a89dca.chunk.js",
+    "main.js.map": "/langtons-ant/static/js/main.10a89dca.chunk.js.map",
+    "runtime-main.js": "/langtons-ant/static/js/runtime-main.1fde7d8a.js",
+    "runtime-main.js.map": "/langtons-ant/static/js/runtime-main.1fde7d8a.js.map",
+    "static/js/2.f6d09778.chunk.js": "/langtons-ant/static/js/2.f6d09778.chunk.js",
+    "static/js/2.f6d09778.chunk.js.map": "/langtons-ant/static/js/2.f6d09778.chunk.js.map",
+    "static/js/3.d08de9a5.chunk.js": "/langtons-ant/static/js/3.d08de9a5.chunk.js",
+    "adc1cb092f523b84ad7d.module.wasm": "/langtons-ant/adc1cb092f523b84ad7d.module.wasm",
+    "static/js/3.d08de9a5.chunk.js.map": "/langtons-ant/static/js/3.d08de9a5.chunk.js.map",
     "index.html": "/langtons-ant/index.html",
-    "static/css/main.dbff90ba.chunk.css.map": "/langtons-ant/static/css/main.dbff90ba.chunk.css.map",
-    "static/js/2.782960a6.chunk.js.LICENSE.txt": "/langtons-ant/static/js/2.782960a6.chunk.js.LICENSE.txt"
+    "static/css/main.2c8da082.chunk.css.map": "/langtons-ant/static/css/main.2c8da082.chunk.css.map",
+    "static/js/2.f6d09778.chunk.js.LICENSE.txt": "/langtons-ant/static/js/2.f6d09778.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.5fbdce48.js",
-    "static/js/2.782960a6.chunk.js",
-    "static/css/main.dbff90ba.chunk.css",
-    "static/js/main.8da363c7.chunk.js"
+    "static/js/runtime-main.1fde7d8a.js",
+    "static/js/2.f6d09778.chunk.js",
+    "static/css/main.2c8da082.chunk.css",
+    "static/js/main.10a89dca.chunk.js"
   ]
 }
