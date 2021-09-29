@@ -1,3 +1,4 @@
+#[wasm_bindgen]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 
 struct Ant {

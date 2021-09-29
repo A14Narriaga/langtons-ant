@@ -1,16 +1,17 @@
-import { useEffect } from "react"
-// import { memory } from "langtons-ant-algorithm/langtons_ant_algorithm_bg.wasm";
-// import { Grid } from "langtons-ant-algorithm";
+import  { useEffect } from "react"
+import { memory } from "langtons-ant-algorithm/langtons_ant_algorithm_bg.wasm";
+import { Grid } from "langtons-ant-algorithm";
 
-const cols = 207
-const rows = 107
-const space = 0.5;
-// let grid: Grid
+const cols = 206
+const rows = 106
+const space = 0.5
 let canvas: HTMLCanvasElement
 let context: CanvasRenderingContext2D
 let board: Array<Array<number>>
+let grid: Grid
 
 const loadGame = (cellSize: number) => {
+  grid = Grid.new(10, 10)
   canvas = document.getElementById("canvas") as HTMLCanvasElement
   context = canvas.getContext("2d") as CanvasRenderingContext2D
   const cellSpace = cellSize + space

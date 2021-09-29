@@ -119,6 +119,7 @@ npx wasm-pack build --out-dir ./pkg
 
 #### Start REACT App
 ```
+npm i
 npm run start
 ```
 
