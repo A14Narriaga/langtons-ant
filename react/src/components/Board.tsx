@@ -1,6 +1,6 @@
-import  { useEffect } from "react"
-import { memory } from "langtons-ant-algorithm/langtons_ant_algorithm_bg.wasm";
-import { Grid } from "langtons-ant-algorithm";
+import { useEffect } from "react"
+// import { memory } from "langtons-ant-algorithm/langtons_ant_algorithm_bg.wasm";
+import { Grid } from "langtons-ant-algorithm"
 
 const cols = 206
 const rows = 106
@@ -12,6 +12,7 @@ let grid: Grid
 
 const loadGame = (cellSize: number) => {
   grid = Grid.new(10, 10)
+  grid.addAnt(3, 3)
   canvas = document.getElementById("canvas") as HTMLCanvasElement
   context = canvas.getContext("2d") as CanvasRenderingContext2D
   const cellSpace = cellSize + space
