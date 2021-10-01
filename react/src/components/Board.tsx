@@ -4,6 +4,8 @@ import { Grid } from "langtons-ant-algorithm"
 
 const colorDead = "#FFFFFF"
 const colorAlive = "#000000"
+const cols = 180
+const rows = 130
 const space = 0.5
 let cellSpace: number
 let cellSize: number
@@ -28,35 +30,57 @@ const start = () => {
   }
 }
 
-const loadBoard = () => {
-  const cols = 206
-  const rows = 106
-  grid = Grid.new(rows, cols)
-  grid.addAnt(53, 103)
-  canvas = document.getElementById("canvas") as HTMLCanvasElement
-  context = canvas.getContext("2d") as CanvasRenderingContext2D
+const zoomBoard = () => {
   cellSpace = cellSize + space
   canvas.width = cellSpace * cols + space
   canvas.height = cellSpace * rows + space
-  board = Array.from(new Array(cols)).map(row => new Array(rows)) as Array<Array<number>>
   for (let x = 0; x < cols; x++) {
     for (let y = 0; y < rows; y++) {
-      //const state = y % 2 === 0 ? (x % 2 === 0 ? 0 : 1) : x % 2 === 0 ? 1 : 0
-      board[x][y] = 0
+      const state = board[y][x]
+      context.fillStyle = state ? colorAlive : colorDead
+      const dx = cellSpace * x + space
+      const dy = cellSpace * y + space
+      context.fillRect(dx, dy, cellSize, cellSize)
+    }
+  }
+}
+
+const loadBoard = () => {
+  grid = Grid.new(rows, cols)
+  grid.addAnt(65, 90)
+  canvas = document.getElementById("canvas") as HTMLCanvasElement
+  context = canvas.getContext("2d") as CanvasRenderingContext2D
+  board = Array.from(new Array(cols)).map(row => new Array(rows)) as Array<Array<number>>
+  cellSpace = cellSize + space
+  canvas.width = cellSpace * cols + space
+  canvas.height = cellSpace * rows + space
+  for (let x = 0; x < cols; x++) {
+    for (let y = 0; y < rows; y++) {
+      board[y][x] = 0
       const dx = cellSpace * x + space
       const dy = cellSpace * y + space
       context.fillStyle = colorDead
       context.fillRect(dx, dy, cellSize, cellSize)
     }
   }
-  setInterval(() => start(), 1)
 }
 
-const Board = ({ stateCellSize }: { stateCellSize: any }) => {
+const Board = ({ stateCellSize, isRunning }: { stateCellSize: any; isRunning: boolean }) => {
   useEffect(() => {
-    cellSize = stateCellSize.size
+    cellSize = 3
     loadBoard()
+  }, [])
+
+  useEffect(() => {
+    console.log("CAMBIA", stateCellSize.size)
+    cellSize = stateCellSize.size
+    zoomBoard()
   }, [stateCellSize])
+
+  useEffect(() => {
+    console.log("run", isRunning)
+    setInterval(() => start(), 1)
+  }, [isRunning])
 
   return (
     <main>
