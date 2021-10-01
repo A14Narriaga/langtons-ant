@@ -8,10 +8,10 @@ pub enum Cell {
 }
 
 impl Cell {
-    fn toggle(&mut self) {
-        *self = match *self {
-            Cell::Dead => Cell::Alive,
-            Cell::Alive => Cell::Dead,
-        };
-    }
+	fn toggle(&mut self) {
+		*self = match *self {
+			Cell::Dead => Cell::Alive,
+			Cell::Alive => Cell::Dead,
+		};
+	}
 }
