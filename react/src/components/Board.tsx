@@ -1,6 +1,6 @@
 import { useEffect } from "react"
 import { memory } from "langtons-ant-algorithm/langtons_ant_algorithm_bg.wasm"
-import { Grid, Ant } from "langtons-ant-algorithm"
+import { Grid } from "langtons-ant-algorithm"
 
 const colorDead = "#FFFFFF"
 const colorAlive = "#000000"
@@ -13,7 +13,6 @@ let canvas: HTMLCanvasElement
 let context: CanvasRenderingContext2D
 let board: Array<Array<number>>
 let grid: Grid
-let ant: Ant
 
 const startGame = () => {
   grid.moveAnts()
