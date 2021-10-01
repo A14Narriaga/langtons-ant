@@ -1,8 +1,7 @@
-@mixin grid {
+@mixin board {
   main {
-    max-width: 1030px;
+    max-width: 1024px;
     margin: 0 auto;
-    padding: 0 2rem;
     .information {
       background-color: rgba(0, 255, 255, 0.274);
       border-radius: 0.3rem 0.3rem 0 0;

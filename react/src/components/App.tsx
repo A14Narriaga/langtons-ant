@@ -1,5 +1,4 @@
 import { useReducer } from "react"
-
 import "../scss/App.scss"
 import Footer from "./Footer"
 import Board from "./Board"
@@ -10,15 +9,14 @@ function reducerCellSize(state: any, actions: any) {
     case "zoomIn":
       return { size: state.size + 1 }
     case "zoomOut":
-      return { size: state.size === 4 ? state.size : state.size - 1 }
+      return { size: state.size === 1 ? state.size : state.size - 1 }
     default:
       return state
   }
 }
 
 const App = () => {
-  const [stateCellSize, dispatchCellSize] = useReducer(reducerCellSize, { size: 4 })
-
+  const [stateCellSize, dispatchCellSize] = useReducer(reducerCellSize, { size: 3 })
   return (
     <>
       <Header dispatchCellSize={dispatchCellSize} />

@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@500&display=swap');
 @import "./header";
-@import "./grid";
+@import "./board";
 @import "./footer";
 
 $backgroung-color: #00445e;
@@ -16,11 +16,11 @@ $text-color: rgb(197, 197, 197);
 body {
   background: $backgroung-color;
   @include header;
-  @include grid;
+  @include board;
   @include footer;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 690px) {
   .header-container {
     flex-direction: column;
   }

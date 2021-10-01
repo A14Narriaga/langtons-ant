@@ -4,8 +4,6 @@ import { Grid } from "langtons-ant-algorithm"
 
 const colorDead = "#FFFFFF"
 const colorAlive = "#000000"
-const cols = 206
-const rows = 106
 const space = 0.5
 let cellSpace: number
 let cellSize: number
@@ -14,11 +12,10 @@ let context: CanvasRenderingContext2D
 let board: Array<Array<number>>
 let grid: Grid
 
-const startGame = () => {
+const start = () => {
   grid.moveAnts()
   const numChanges = grid.getNumChanges()
   let changes = new Uint32Array(memory.buffer, grid.getChanges(), numChanges)
-  console.log(changes)
   for (let i = 0; i < numChanges; i++) {
     const row = changes[i]
     const col = changes[i + 1]
@@ -31,7 +28,9 @@ const startGame = () => {
   }
 }
 
-const loadGame = () => {
+const loadBoard = () => {
+  const cols = 206
+  const rows = 106
   grid = Grid.new(rows, cols)
   grid.addAnt(53, 103)
   canvas = document.getElementById("canvas") as HTMLCanvasElement
@@ -50,13 +49,13 @@ const loadGame = () => {
       context.fillRect(dx, dy, cellSize, cellSize)
     }
   }
-  setInterval(() => startGame(), 1);
+  setInterval(() => start(), 1)
 }
 
-const Game = ({ stateCellSize }: { stateCellSize: any }) => {
+const Board = ({ stateCellSize }: { stateCellSize: any }) => {
   useEffect(() => {
     cellSize = stateCellSize.size
-    loadGame()
+    loadBoard()
   }, [stateCellSize])
 
   return (
@@ -77,4 +76,4 @@ const Game = ({ stateCellSize }: { stateCellSize: any }) => {
   )
 }
 
-export default Game
+export default Board

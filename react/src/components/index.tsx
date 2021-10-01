@@ -1,17 +1,13 @@
-import React, { Suspense } from "react";
+import React, { Suspense } from "react"
 
-const Main = React.lazy(() => import("./App"));
+const Main = React.lazy(() => import("./App"))
 
 const App: React.FC = () => {
   return (
-    <main>
-      <div id="mainScreen">
-        <Suspense fallback={null}>
-          <Main />
-        </Suspense>
-      </div>
-    </main>
-  );
-};
+    <Suspense fallback={null}>
+      <Main />
+    </Suspense>
+  )
+}
 
-export default App;
+export default App
