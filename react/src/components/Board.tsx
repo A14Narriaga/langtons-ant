@@ -65,14 +65,13 @@ const loadBoard = () => {
   }
 }
 
-const Board = ({ stateCellSize, isRunning }: { stateCellSize: any; isRunning: boolean }) => {
+const Board = ({ stateCellSize, isRunning, reload }: { stateCellSize: any; isRunning: boolean, reload: boolean }) => {
   useEffect(() => {
     cellSize = 3
     loadBoard()
-  }, [])
+  }, [reload])
 
   useEffect(() => {
-    console.log("CAMBIA", stateCellSize.size)
     cellSize = stateCellSize.size
     zoomBoard()
   }, [stateCellSize])
@@ -89,6 +88,7 @@ const Board = ({ stateCellSize, isRunning }: { stateCellSize: any; isRunning: bo
           <li>Ants: 1</li>
           <li>Generation: 1959</li>
           <li>Cells: 10</li>
+          <li>Board: 130x180</li>
         </ul>
       </section>
       <section className="container">

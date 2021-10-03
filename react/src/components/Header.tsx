@@ -2,16 +2,19 @@ import { FaRegEdit, FaRegPlayCircle, FaRegPauseCircle } from "react-icons/fa"
 import { BiZoomIn, BiZoomOut } from "react-icons/bi"
 import { HiOutlineFolderDownload } from "react-icons/hi"
 import { AiOutlineAreaChart, AiOutlineReload } from "react-icons/ai"
-import { GiAnt } from "react-icons/gi"
 
 const Header = ({
   dispatchCellSize,
   isRunning,
   setIsRunning,
+  setReload,
+  setShowConfig
 }: {
   dispatchCellSize: any
   isRunning: boolean
   setIsRunning: any
+  setReload: any
+  setShowConfig: any
 }) => {
 
   return (
@@ -19,12 +22,12 @@ const Header = ({
       <section className="header-container">
         <h1>Langton's ant</h1>
         <div className="options">
-          <li>
+          <li onClick={() => setReload((reload: boolean) => reload ? false : true)}>
             <a href="#!">
               <AiOutlineReload />
             </a>
           </li>
-          <li onClick={() => setIsRunning(isRunning ? false : true)}>
+          <li onClick={() => setIsRunning((running: boolean) => running ? false : true)}>
             <a href="#!">{isRunning ? <FaRegPauseCircle /> : <FaRegPlayCircle />}</a>
           </li>
           <li onClick={() => dispatchCellSize({ type: "zoomIn" })}>
@@ -39,22 +42,17 @@ const Header = ({
           </li>
           <li>
             <a href="#!">
-              <GiAnt />
-            </a>
-          </li>
-          <li>
-            <a href="#!">
               <HiOutlineFolderDownload />
             </a>
           </li>
           <li>
             <a href="#!">
-              <FaRegEdit />
+              <AiOutlineAreaChart />
             </a>
           </li>
-          <li>
+          <li onClick={() => setShowConfig((show: boolean) => show ? false : true)}>
             <a href="#!">
-              <AiOutlineAreaChart />
+              <FaRegEdit />
             </a>
           </li>
         </div>

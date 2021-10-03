@@ -1,0 +1,68 @@
+@mixin config {
+  .config {
+    max-width: 500px;
+    width: 90%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.815);
+    border-radius: 0.3rem;
+    padding: 0.5rem;
+    box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.1), 0 0 0 1000px rgba(15, 15, 15, 0.95);
+    .config-wrapper {
+      border-radius: 0.3rem;
+      border: 3px solid $backgroung-color;
+      padding: 1rem;
+      .config-close {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 0.5rem 0.5rem 0;
+        border-bottom: 2px solid $backgroung-color;
+        margin-bottom: 1rem;
+        .close {
+          font-size: 1.5rem;
+          &:hover {
+            color: $backgroung-color;
+          }
+        }
+      }
+      .config-row {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.5rem;
+        .input-type {
+          display: flex;
+          justify-content: space-between;
+          margin-right: 1rem;
+        }
+        .config-btn-ant {
+          padding: 0.1rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-right: 1rem;
+          .config-ant {
+            font-size: 1.2rem;
+            background-color: #ffffff;
+            color: black;
+          }
+        }
+      }
+      hr {
+        margin: 1rem 0 0.5rem 0;
+      }
+      p {
+        font-weight: bold;
+      }
+      .config-add {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        font-size: 0.9rem;
+      }
+    }
+  }
+}

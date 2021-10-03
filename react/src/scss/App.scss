@@ -1,7 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@500&display=swap");
 @import "./header";
 @import "./board";
 @import "./footer";
+@import "./config";
 
 $backgroung-color: #00445e;
 $text-color: rgb(197, 197, 197);
@@ -13,11 +14,57 @@ $text-color: rgb(197, 197, 197);
   font-family: "Baloo Paaji 2", monospace;
 }
 
+input[type="color"] {
+  -webkit-appearance: none;
+  border: none;
+  width: 3rem;
+  height: 1.5rem;
+}
+input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+input[type="color"]::-webkit-color-swatch {
+  border: none;
+  border-radius: 0.3rem;
+}
+
+input[type="number"] {
+  width: 100%;
+  height: 1.3rem;
+  background-color: transparent;
+  border: none;
+  text-align: center;
+  border-bottom: 2px solid $backgroung-color;
+  &:focus {
+    background-color: #00435e2d;
+  }
+}
+
+button {
+  padding: 0 0.5rem;
+  margin-right: 0.3rem;
+  border-radius: 0.3rem;
+  border: 2px solid $backgroung-color;
+  color: $backgroung-color;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+label {
+  margin-right: 0.5rem;
+}
+
+.disable-btn {
+  color: gray;
+  border-color: gray;
+}
+
 body {
   background: $backgroung-color;
   @include header;
   @include board;
   @include footer;
+  @include config;
 }
 
 @media (max-width: 690px) {
