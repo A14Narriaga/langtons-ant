@@ -65,9 +65,16 @@ const loadBoard = () => {
   }
 }
 
-const Board = ({ stateCellSize, isRunning, reload }: { stateCellSize: any; isRunning: boolean, reload: boolean }) => {
+const Board = ({
+  stateCellSize,
+  isRunning,
+  reload,
+}: {
+  stateCellSize: any
+  isRunning: boolean
+  reload: boolean
+}) => {
   useEffect(() => {
-    cellSize = 3
     loadBoard()
   }, [reload])
 
@@ -77,7 +84,6 @@ const Board = ({ stateCellSize, isRunning, reload }: { stateCellSize: any; isRun
   }, [stateCellSize])
 
   useEffect(() => {
-    console.log("run", isRunning)
     setInterval(() => start(), 1)
   }, [isRunning])
 

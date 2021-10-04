@@ -17,14 +17,14 @@ $text-color: rgb(197, 197, 197);
 input[type="color"] {
   -webkit-appearance: none;
   border: none;
-  width: 3rem;
-  height: 1.5rem;
+  width: 2rem;
+  height: 1.3rem;
 }
 input[type="color"]::-webkit-color-swatch-wrapper {
   padding: 0;
 }
 input[type="color"]::-webkit-color-swatch {
-  border: none;
+  border: 2px solid $backgroung-color;
   border-radius: 0.3rem;
 }
 
@@ -41,22 +41,27 @@ input[type="number"] {
 }
 
 button {
-  padding: 0 0.5rem;
-  margin-right: 0.3rem;
   border-radius: 0.3rem;
   border: 2px solid $backgroung-color;
   color: $backgroung-color;
   font-weight: bold;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 label {
   margin-right: 0.5rem;
 }
 
-.disable-btn {
+.btn-disable {
   color: gray;
   border-color: gray;
+}
+
+.space {
+  margin-right: 0.5rem;
 }
 
 body {

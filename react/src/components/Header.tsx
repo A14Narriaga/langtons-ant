@@ -1,14 +1,14 @@
-import { FaRegEdit, FaRegPlayCircle, FaRegPauseCircle } from "react-icons/fa"
+import { FaRegPlayCircle, FaRegPauseCircle } from "react-icons/fa"
 import { BiZoomIn, BiZoomOut } from "react-icons/bi"
-import { HiOutlineFolderDownload } from "react-icons/hi"
 import { AiOutlineAreaChart, AiOutlineReload } from "react-icons/ai"
+import { VscSettingsGear } from "react-icons/vsc"
 
 const Header = ({
   dispatchCellSize,
   isRunning,
   setIsRunning,
   setReload,
-  setShowConfig
+  setShowConfig,
 }: {
   dispatchCellSize: any
   isRunning: boolean
@@ -16,18 +16,17 @@ const Header = ({
   setReload: any
   setShowConfig: any
 }) => {
-
   return (
     <header>
       <section className="header-container">
         <h1>Langton's ant</h1>
         <div className="options">
-          <li onClick={() => setReload((reload: boolean) => reload ? false : true)}>
+          <li onClick={() => setReload((reload: boolean) => (reload ? false : true))}>
             <a href="#!">
               <AiOutlineReload />
             </a>
           </li>
-          <li onClick={() => setIsRunning((running: boolean) => running ? false : true)}>
+          <li onClick={() => setIsRunning((running: boolean) => (running ? false : true))}>
             <a href="#!">{isRunning ? <FaRegPauseCircle /> : <FaRegPlayCircle />}</a>
           </li>
           <li onClick={() => dispatchCellSize({ type: "zoomIn" })}>
@@ -42,17 +41,12 @@ const Header = ({
           </li>
           <li>
             <a href="#!">
-              <HiOutlineFolderDownload />
-            </a>
-          </li>
-          <li>
-            <a href="#!">
               <AiOutlineAreaChart />
             </a>
           </li>
-          <li onClick={() => setShowConfig((show: boolean) => show ? false : true)}>
+          <li onClick={() => setShowConfig((show: boolean) => (show ? false : true))}>
             <a href="#!">
-              <FaRegEdit />
+              <VscSettingsGear />
             </a>
           </li>
         </div>

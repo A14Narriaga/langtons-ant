@@ -32,7 +32,7 @@ const App = () => {
       />
       <Board stateCellSize={stateCellSize} isRunning={isRunning} reload={reload} />
       <Footer />
-      {showConfig && <Config setShowConfig={setShowConfig} />}
+      {showConfig && <Config setShowConfig={setShowConfig}/>}
     </>
   )
 }

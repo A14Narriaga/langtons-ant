@@ -1,6 +1,6 @@
 @mixin config {
   .config {
-    max-width: 500px;
+    max-width: 600px;
     width: 90%;
     position: fixed;
     top: 50%;
@@ -37,17 +37,8 @@
           justify-content: space-between;
           margin-right: 1rem;
         }
-        .config-btn-ant {
-          padding: 0.1rem;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          margin-right: 1rem;
-          .config-ant {
-            font-size: 1.2rem;
-            background-color: #ffffff;
-            color: black;
-          }
+        .opc-plan {
+          padding: 0 0.3rem;
         }
       }
       hr {
@@ -56,12 +47,20 @@
       p {
         font-weight: bold;
       }
-      .config-add {
+      .config-ant {
         display: flex;
-        align-items: center;
         justify-content: center;
-        width: 100%;
-        font-size: 0.9rem;
+        align-items: center;
+        .config-position-ant {
+          font-size: 1rem;
+          padding: 0.1rem;
+        }
+        #ant-color {
+          min-width: 1.5rem;
+        }
+        .config-add-ant {
+          font-size: 1.1rem;
+        }
       }
     }
   }

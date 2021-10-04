@@ -1,13 +1,17 @@
 import { GiAnt } from "react-icons/gi"
-import { RiCloseLine, RiAddCircleLine } from "react-icons/ri"
+import { RiCloseLine } from "react-icons/ri"
+import { MdAdd } from "react-icons/md"
 
-const Config = ({setShowConfig}:{setShowConfig:any}) => {
+const Config = ({ setShowConfig }: { setShowConfig: any }) => {
   return (
     <section className="config">
       <div className="config-wrapper">
         <section className="config-close">
           <h1>Configuration</h1>
-          <RiCloseLine className="close" onClick={() => setShowConfig((show: boolean) => show ? false : true)}/>
+          <RiCloseLine
+            className="close"
+            onClick={() => setShowConfig((show: boolean) => (show ? false : true))}
+          />
         </section>
         <section className="config-row">
           <div className="input-type">
@@ -21,8 +25,8 @@ const Config = ({setShowConfig}:{setShowConfig:any}) => {
         </section>
         <section className="config-row">
           <label htmlFor="plan">Plan:</label>
-          <button className="disable-btn">Toroide</button>
-          <button>Limitado</button>
+          <button className="btn-disable space opc-plan">Toroide</button>
+          <button className="opc-plan">Limitado</button>
         </section>
         <section className="config-row">
           <label htmlFor="background">Background:</label>
@@ -30,18 +34,21 @@ const Config = ({setShowConfig}:{setShowConfig:any}) => {
         </section>
         <hr />
         <p>Ants</p>
-        <section className="config-row">
+        <section className="config-ant">
           <label htmlFor="ant">Position: </label>
-          <button className="config-btn-ant">
-            <GiAnt className="config-ant" id="ant" />
+          <button className="space config-position-ant">
+            <GiAnt id="ant" />
           </button>
-          <label htmlFor="color">Color: </label>
-          <input type="color" id="color"/>
+          <label htmlFor="ant-color">Color: </label>
+          <input className="space" type="color" id="ant-color" />
+          <label htmlFor="x">x: </label>
+          <input className="space" type="number" id="x" />
+          <label htmlFor="y">y: </label>
+          <input className="space" type="number" id="y" />
+          <button className="config-add-ant">
+            <MdAdd />
+          </button>
         </section>
-        <button className="config-add">
-          <RiAddCircleLine />
-          <p>Add ant</p>
-        </button>
       </div>
     </section>
   )
