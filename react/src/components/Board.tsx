@@ -94,7 +94,6 @@ const Board = ({
           <li>Ants: 1</li>
           <li>Generation: 1959</li>
           <li>Cells: 10</li>
-          <li>Board: 130x180</li>
         </ul>
       </section>
       <section className="container">
