@@ -18,7 +18,7 @@
       .config-close {
         display: flex;
         justify-content: space-between;
-        padding: 0 0.5rem 0.5rem 0;
+        padding: 0 0 0.5rem 0;
         border-bottom: 2px solid $backgroung-color;
         margin-bottom: 1rem;
         .close {
@@ -49,11 +49,15 @@
       }
       .config-ant {
         display: flex;
-        justify-content: center;
         align-items: center;
         .config-position-ant {
-          font-size: 1rem;
+          font-size: 1.1rem;
+          color: black;
+          background-color: whitesmoke;
           padding: 0.1rem;
+        }
+        .coordeanate {
+          max-width: 4rem;
         }
         #ant-color {
           min-width: 1.5rem;

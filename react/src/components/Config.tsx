@@ -35,16 +35,14 @@ const Config = ({ setShowConfig }: { setShowConfig: any }) => {
         <hr />
         <p>Ants</p>
         <section className="config-ant">
-          <label htmlFor="ant">Position: </label>
           <button className="space config-position-ant">
             <GiAnt id="ant" />
           </button>
-          <label htmlFor="ant-color">Color: </label>
           <input className="space" type="color" id="ant-color" />
           <label htmlFor="x">x: </label>
-          <input className="space" type="number" id="x" />
+          <input className="space coordeanate" type="number" id="x" />
           <label htmlFor="y">y: </label>
-          <input className="space" type="number" id="y" />
+          <input className="space coordeanate" type="number" id="y" />
           <button className="config-add-ant">
             <MdAdd />
           </button>
