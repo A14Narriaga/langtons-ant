@@ -2,35 +2,67 @@ import { GiAnt } from "react-icons/gi"
 import { RiCloseLine } from "react-icons/ri"
 import { MdAdd } from "react-icons/md"
 
-const Config = ({ setShowConfig }: { setShowConfig: any }) => {
+const Config = ({
+  setShowConfig,
+  rows,
+  setRows,
+  cols,
+  setCols,
+  toroide,
+  setToroide,
+  backgroundColor,
+  setBackgroundColor,
+}: {
+  setShowConfig: any
+  rows: number
+  setRows: any
+  cols: number
+  setCols: any
+  setToroide: any
+  toroide: boolean
+  backgroundColor: string
+  setBackgroundColor: any
+}) => {
   return (
     <section className="config">
       <div className="config-wrapper">
         <section className="config-close">
           <h1>Configuration</h1>
-          <RiCloseLine
-            className="close"
-            onClick={() => setShowConfig((show: boolean) => (show ? false : true))}
-          />
+          <RiCloseLine className="close" onClick={() => setShowConfig(false)} />
         </section>
         <section className="config-row">
           <div className="input-type">
             <label htmlFor="rows">Rows:</label>
-            <input id="rows" type="number" />
+            <input id="rows" type="number" value={rows} onChange={e => setRows(e.target.value)} />
           </div>
           <div className="input-type">
             <label htmlFor="cols">Cols:</label>
-            <input id="cols" type="number" />
+            <input id="cols" type="number" value={cols} onChange={e => setCols(e.target.value)} />
           </div>
         </section>
         <section className="config-row">
           <label htmlFor="plan">Plan:</label>
-          <button className="btn-disable space opc-plan">Toroide</button>
-          <button className="opc-plan">Limitado</button>
+          <button
+            className={`${toroide ? "" : "btn-disable"} space opc-plan`}
+            onClick={() => setToroide(true)}
+          >
+            Toroide
+          </button>
+          <button
+            className={`${toroide ? "btn-disable" : ""} opc-plan`}
+            onClick={() => setToroide(false)}
+          >
+            Limitado
+          </button>
         </section>
         <section className="config-row">
           <label htmlFor="background">Background:</label>
-          <input type="color" id="background" />
+          <input
+            type="color"
+            id="background"
+            value={backgroundColor}
+            onChange={e => setBackgroundColor(e.target.value)}
+          />
         </section>
         <hr />
         <p>Ants</p>

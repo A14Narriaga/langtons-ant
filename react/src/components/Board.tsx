@@ -2,11 +2,11 @@ import { useEffect } from "react"
 import { memory } from "langtons-ant-algorithm/langtons_ant_algorithm_bg.wasm"
 import { Grid } from "langtons-ant-algorithm"
 
-const colorDead = "#FFFFFF"
 const colorAlive = "#000000"
 const cols = 180
 const rows = 130
-const space = 0.5
+const space = 1
+let colorDead: string
 let cellSpace: number
 let cellSize: number
 let canvas: HTMLCanvasElement
@@ -30,7 +30,7 @@ const start = () => {
   }
 }
 
-const zoomBoard = () => {
+const reloadBoard = () => {
   cellSpace = cellSize + space
   canvas.width = cellSpace * cols + space
   canvas.height = cellSpace * rows + space
@@ -45,7 +45,8 @@ const zoomBoard = () => {
   }
 }
 
-const loadBoard = () => {
+const loadBoard = (rs: number, cs: number, toroide: boolean) => {
+  console.log(rs, cs, toroide, colorDead)
   grid = Grid.new(rows, cols)
   grid.addAnt(65, 90)
   canvas = document.getElementById("canvas") as HTMLCanvasElement
@@ -69,18 +70,32 @@ const Board = ({
   stateCellSize,
   isRunning,
   reload,
+  rows,
+  cols,
+  toroide,
+  backgroundColor,
 }: {
   stateCellSize: any
   isRunning: boolean
   reload: boolean
+  rows: number
+  cols: number
+  toroide: boolean
+  backgroundColor: string
 }) => {
   useEffect(() => {
-    loadBoard()
-  }, [reload])
+    loadBoard(rows, cols, toroide)
+  }, [reload, rows, cols, toroide])
+
+  useEffect(() => {
+		console.log(backgroundColor);
+    colorDead = backgroundColor
+    reloadBoard()
+  }, [backgroundColor])
 
   useEffect(() => {
     cellSize = stateCellSize.size
-    zoomBoard()
+    reloadBoard()
   }, [stateCellSize])
 
   useEffect(() => {

@@ -21,6 +21,10 @@ const App = () => {
   const [isRunning, setIsRunning] = useState(true)
   const [reload, setReload] = useState(false)
   const [showConfig, setShowConfig] = useState(false)
+  const [rows, setRows] = useState(10)
+  const [cols, setCols] = useState(20)
+  const [toroide, setToroide] = useState(false)
+  const [backgroundColor, setBackgroundColor] = useState("#c5c5c5")
   return (
     <>
       <Header
@@ -30,9 +34,29 @@ const App = () => {
         setReload={setReload}
         setShowConfig={setShowConfig}
       />
-      <Board stateCellSize={stateCellSize} isRunning={isRunning} reload={reload} />
+      <Board
+        stateCellSize={stateCellSize}
+        isRunning={isRunning}
+        reload={reload}
+        rows={rows}
+        cols={cols}
+        toroide={toroide}
+        backgroundColor={backgroundColor}
+      />
       <Footer />
-      {showConfig && <Config setShowConfig={setShowConfig}/>}
+      {showConfig && (
+        <Config
+          setShowConfig={setShowConfig}
+					rows={rows}
+          setRows={setRows}
+					cols={cols}
+          setCols={setCols}
+          setToroide={setToroide}
+					toroide={toroide}
+					backgroundColor={backgroundColor}
+          setBackgroundColor={setBackgroundColor}
+        />
+      )}
     </>
   )
 }
