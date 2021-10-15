@@ -1,6 +1,6 @@
-import { GiAnt } from "react-icons/gi"
-import { RiCloseLine } from "react-icons/ri"
-import { MdAdd } from "react-icons/md"
+import { useState } from "react"
+import { ToastContainer, toast } from "react-toastify"
+import "react-toastify/dist/ReactToastify.css"
 
 const Config = ({
   setShowConfig,
@@ -23,64 +23,95 @@ const Config = ({
   backgroundColor: string
   setBackgroundColor: any
 }) => {
+  const [newRows, setNewRows] = useState(rows)
+  const [newCols, setNewCols] = useState(cols)
+  const [newBgColor, setNewBgColor] = useState(backgroundColor)
+
+  const saveInfo = () => {
+    if (!(newRows > 0 && newRows < 1001)) {
+      toast.error("Row value ​​must be greater than 0 and less than 1001")
+      return
+    }
+    if (!(newCols > 0 && newCols < 1001)) {
+      toast.error("Col value ​​must be greater than 0 and less than 1001")
+      return
+    }
+    setRows(newRows)
+    setCols(newCols)
+    setBackgroundColor(newBgColor)
+    setShowConfig(false)
+    toast("Board updated")
+  }
+
   return (
-    <section className="config">
-      <div className="config-wrapper">
-        <section className="config-close">
-          <h1>Configuration</h1>
-          <RiCloseLine className="close" onClick={() => setShowConfig(false)} />
-        </section>
-        <section className="config-row">
-          <div className="input-type">
-            <label htmlFor="rows">Rows:</label>
-            <input id="rows" type="number" value={rows} onChange={e => setRows(e.target.value)} />
-          </div>
-          <div className="input-type">
-            <label htmlFor="cols">Cols:</label>
-            <input id="cols" type="number" value={cols} onChange={e => setCols(e.target.value)} />
-          </div>
-        </section>
-        <section className="config-row">
-          <label htmlFor="plan">Plan:</label>
-          <button
-            className={`${toroide ? "" : "btn-disable"} space opc-plan`}
-            onClick={() => setToroide(true)}
-          >
-            Toroide
+    <>
+      <section className="config">
+        <div className="config-wrapper">
+          <section className="config-header">
+            <h1>Configuration</h1>
+          </section>
+          <section className="config-row">
+            <div className="input-type">
+              <label htmlFor="rows">Rows:</label>
+              <input
+                id="rows"
+                type="number"
+                value={newRows}
+                onChange={e => setNewRows(Number(e.target.value))}
+              />
+            </div>
+            <div className="input-type">
+              <label htmlFor="cols">Cols:</label>
+              <input
+                id="cols"
+                type="number"
+                value={newCols}
+                onChange={e => setNewCols(Number(e.target.value))}
+              />
+            </div>
+          </section>
+          <section className="config-row">
+            <label htmlFor="plan">Plan:</label>
+            <button
+              className={`${toroide ? "" : "btn-disable"} space opc-plan`}
+              onClick={() => setToroide(true)}
+            >
+              Toroide
+            </button>
+            <button
+              className={`${toroide ? "btn-disable" : ""} opc-plan`}
+              onClick={() => setToroide(false)}
+            >
+              Limitado
+            </button>
+          </section>
+          <section className="config-row">
+            <label htmlFor="background">Background:</label>
+            <input
+              type="color"
+              id="background"
+              value={newBgColor}
+              onChange={e => setNewBgColor(e.target.value)}
+            />
+          </section>
+          <button className="config-btn-acept" onClick={saveInfo}>
+            Acept
           </button>
-          <button
-            className={`${toroide ? "btn-disable" : ""} opc-plan`}
-            onClick={() => setToroide(false)}
-          >
-            Limitado
-          </button>
-        </section>
-        <section className="config-row">
-          <label htmlFor="background">Background:</label>
-          <input
-            type="color"
-            id="background"
-            value={backgroundColor}
-            onChange={e => setBackgroundColor(e.target.value)}
-          />
-        </section>
-        <hr />
-        <p>Ants</p>
-        <section className="config-ant">
-          <button className="space config-position-ant">
-            <GiAnt id="ant" />
-          </button>
-          <input className="space" type="color" id="ant-color" />
-          <label htmlFor="x">x: </label>
-          <input className="space coordeanate" type="number" id="x" />
-          <label htmlFor="y">y: </label>
-          <input className="space coordeanate" type="number" id="y" />
-          <button className="config-add-ant">
-            <MdAdd />
-          </button>
-        </section>
-      </div>
-    </section>
+        </div>
+      </section>
+      <ToastContainer
+        position="bottom-center"
+				theme="colored"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
+    </>
   )
 }
 

@@ -1,7 +1,7 @@
-@mixin config {
-  .config {
+@mixin addAnt {
+  .add-ant {
     font-size: 1.1rem;
-    max-width: 500px;
+    max-width: 400px;
     width: 90%;
     position: fixed;
     top: 50%;
@@ -12,32 +12,27 @@
     border-radius: 0.3rem;
     padding: 0.5rem;
     box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.1), 0 0 0 1000px rgba(15, 15, 15, 0.95);
-    .config-wrapper {
+    .ant-wrapper {
       border-radius: 0.3rem;
       border: 3px solid $backgroung-color;
       padding: 1rem;
-      .config-header {
-        display: flex;
-        justify-content: space-between;
-        padding: 0 0 0.5rem 0;
-        border-bottom: 1px solid $backgroung-color;
-        margin-bottom: 1.5rem;
-      }
-      .config-row {
+      .config-ant {
         display: flex;
         align-items: center;
-        margin-bottom: 0.5rem;
-        .input-type {
-          display: flex;
-          justify-content: space-between;
+        margin-bottom: 1rem;
+        .config-position-ant {
+          font-size: 2rem;
+          color: black;
+          background-color: whitesmoke;
+          padding: 0.1rem;
           margin-right: 1rem;
         }
-        .opc-plan {
-          padding: 0 0.3rem;
+        #ant-color {
+          min-width: 2.5rem;
         }
       }
-      .config-btn-acept {
-				margin-top: 1rem;
+      .config-add-ant {
+        font-size: 1.1rem;
         width: 100%;
       }
     }

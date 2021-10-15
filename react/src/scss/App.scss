@@ -3,6 +3,7 @@
 @import "./board";
 @import "./footer";
 @import "./config";
+@import "./addAnt";
 
 $backgroung-color: #00445e;
 $text-color: #c5c5c5;
@@ -29,6 +30,7 @@ input[type="color"]::-webkit-color-swatch {
 }
 
 input[type="number"] {
+	font-size: 1.1rem;
   width: 100%;
   height: 1.3rem;
   background-color: transparent;
@@ -41,6 +43,7 @@ input[type="number"] {
 }
 
 button {
+	font-size: 0.9rem;
   border-radius: 0.3rem;
   border: 2px solid $backgroung-color;
   color: $backgroung-color;
@@ -49,6 +52,9 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+	&:hover {
+		background-color: rgba(4, 87, 87, 0.247);
+	}
 }
 
 label {
@@ -70,6 +76,7 @@ body {
   @include board;
   @include footer;
   @include config;
+	@include addAnt;
 }
 
 @media (max-width: 690px) {

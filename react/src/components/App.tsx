@@ -4,6 +4,7 @@ import Footer from "./Footer"
 import Board from "./Board"
 import Header from "./Header"
 import Config from "./Config"
+import AddAnt from "./AddAnt"
 
 const reducerCellSize = (state: any, actions: any) => {
   switch (actions.type) {
@@ -21,6 +22,7 @@ const App = () => {
   const [isRunning, setIsRunning] = useState(true)
   const [reload, setReload] = useState(false)
   const [showConfig, setShowConfig] = useState(false)
+  const [showAddAnt, setShowAddAnt] = useState(false)
   const [rows, setRows] = useState(10)
   const [cols, setCols] = useState(20)
   const [toroide, setToroide] = useState(false)
@@ -33,6 +35,7 @@ const App = () => {
         setIsRunning={setIsRunning}
         setReload={setReload}
         setShowConfig={setShowConfig}
+				setShowAddAnt={setShowAddAnt}
       />
       <Board
         stateCellSize={stateCellSize}
@@ -56,6 +59,11 @@ const App = () => {
 					backgroundColor={backgroundColor}
           setBackgroundColor={setBackgroundColor}
         />
+      )}
+			{showAddAnt && (
+        <AddAnt
+				
+				/>
       )}
     </>
   )
