@@ -1,24 +1,26 @@
 {
   "files": {
-    "main.js": "/langtons-ant/static/js/main.c6dcfdac.chunk.js",
-    "main.js.map": "/langtons-ant/static/js/main.c6dcfdac.chunk.js.map",
-    "runtime-main.js": "/langtons-ant/static/js/runtime-main.ae07705c.js",
-    "runtime-main.js.map": "/langtons-ant/static/js/runtime-main.ae07705c.js.map",
-    "static/js/2.564dce74.chunk.js": "/langtons-ant/static/js/2.564dce74.chunk.js",
-    "static/js/2.564dce74.chunk.js.map": "/langtons-ant/static/js/2.564dce74.chunk.js.map",
-    "static/js/3.dbf2eea2.chunk.js": "/langtons-ant/static/js/3.dbf2eea2.chunk.js",
-    "static/js/3.dbf2eea2.chunk.js.map": "/langtons-ant/static/js/3.dbf2eea2.chunk.js.map",
-    "static/css/4.e59ac3ab.chunk.css": "/langtons-ant/static/css/4.e59ac3ab.chunk.css",
-    "static/js/4.87b6dff2.chunk.js": "/langtons-ant/static/js/4.87b6dff2.chunk.js",
-    "6e3832e71deecc02d5ee.module.wasm": "/langtons-ant/6e3832e71deecc02d5ee.module.wasm",
-    "static/js/4.87b6dff2.chunk.js.map": "/langtons-ant/static/js/4.87b6dff2.chunk.js.map",
+    "main.js": "/langtons-ant/static/js/main.f2030cc1.chunk.js",
+    "main.js.map": "/langtons-ant/static/js/main.f2030cc1.chunk.js.map",
+    "runtime-main.js": "/langtons-ant/static/js/runtime-main.a51dac0f.js",
+    "runtime-main.js.map": "/langtons-ant/static/js/runtime-main.a51dac0f.js.map",
+    "static/css/2.f4c56af9.chunk.css": "/langtons-ant/static/css/2.f4c56af9.chunk.css",
+    "static/js/2.109ca359.chunk.js": "/langtons-ant/static/js/2.109ca359.chunk.js",
+    "static/js/2.109ca359.chunk.js.map": "/langtons-ant/static/js/2.109ca359.chunk.js.map",
+    "static/js/3.87b8372c.chunk.js": "/langtons-ant/static/js/3.87b8372c.chunk.js",
+    "static/js/3.87b8372c.chunk.js.map": "/langtons-ant/static/js/3.87b8372c.chunk.js.map",
+    "static/css/4.27df086d.chunk.css": "/langtons-ant/static/css/4.27df086d.chunk.css",
+    "static/js/4.ab1da1ad.chunk.js": "/langtons-ant/static/js/4.ab1da1ad.chunk.js",
+    "df2cd04bedcb645a0adc.module.wasm": "/langtons-ant/df2cd04bedcb645a0adc.module.wasm",
+    "static/js/4.ab1da1ad.chunk.js.map": "/langtons-ant/static/js/4.ab1da1ad.chunk.js.map",
     "index.html": "/langtons-ant/index.html",
-    "static/css/4.e59ac3ab.chunk.css.map": "/langtons-ant/static/css/4.e59ac3ab.chunk.css.map",
-    "static/js/3.dbf2eea2.chunk.js.LICENSE.txt": "/langtons-ant/static/js/3.dbf2eea2.chunk.js.LICENSE.txt"
+    "static/css/2.f4c56af9.chunk.css.map": "/langtons-ant/static/css/2.f4c56af9.chunk.css.map",
+    "static/css/4.27df086d.chunk.css.map": "/langtons-ant/static/css/4.27df086d.chunk.css.map",
+    "static/js/3.87b8372c.chunk.js.LICENSE.txt": "/langtons-ant/static/js/3.87b8372c.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.ae07705c.js",
-    "static/js/3.dbf2eea2.chunk.js",
-    "static/js/main.c6dcfdac.chunk.js"
+    "static/js/runtime-main.a51dac0f.js",
+    "static/js/3.87b8372c.chunk.js",
+    "static/js/main.f2030cc1.chunk.js"
   ]
 }

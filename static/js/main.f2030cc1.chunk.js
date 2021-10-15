@@ -1,0 +1,2 @@
+(this["webpackJsonplangtons-ant"]=this["webpackJsonplangtons-ant"]||[]).push([[0],{9:function(n,e,t){"use strict";t.r(e);var s=t(0),c=t.n(s),a=t(3),l=t.n(a),r=t(1),o=c.a.lazy((function(){return Promise.all([t.e(2),t.e(4)]).then(t.bind(null,27))})),i=function(){return Object(r.jsx)(s.Suspense,{fallback:null,children:Object(r.jsx)(o,{})})};l.a.render(Object(r.jsx)(c.a.StrictMode,{children:Object(r.jsx)(i,{})}),document.getElementById("root"))}},[[9,1,3]]]);
+//# sourceMappingURL=main.f2030cc1.chunk.js.map
