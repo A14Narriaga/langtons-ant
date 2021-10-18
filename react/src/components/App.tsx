@@ -35,7 +35,7 @@ const App = () => {
         setIsRunning={setIsRunning}
         setReload={setReload}
         setShowConfig={setShowConfig}
-				setShowAddAnt={setShowAddAnt}
+        setShowAddAnt={setShowAddAnt}
       />
       <Board
         stateCellSize={stateCellSize}
@@ -50,21 +50,17 @@ const App = () => {
       {showConfig && (
         <Config
           setShowConfig={setShowConfig}
-					rows={rows}
+          rows={rows}
           setRows={setRows}
-					cols={cols}
+          cols={cols}
           setCols={setCols}
           setToroide={setToroide}
-					toroide={toroide}
-					backgroundColor={backgroundColor}
+          toroide={toroide}
+          backgroundColor={backgroundColor}
           setBackgroundColor={setBackgroundColor}
         />
       )}
-			{showAddAnt && (
-        <AddAnt
-				
-				/>
-      )}
+      {showAddAnt && <AddAnt setShowAddAnt={setShowAddAnt} rows={rows} cols={cols} backgroundColor={backgroundColor}/>}
     </>
   )
 }

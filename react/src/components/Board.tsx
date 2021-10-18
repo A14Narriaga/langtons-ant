@@ -64,6 +64,20 @@ const loadBoard = (rs: number, cs: number, toroide: boolean) => {
       context.fillRect(dx, dy, cellSize, cellSize)
     }
   }
+  canvas.onclick = event => {
+    const boundingRect = canvas.getBoundingClientRect()
+    const scaleX = canvas.width / boundingRect.width
+    const scaleY = canvas.height / boundingRect.height
+    const canvasLeft = (event.clientX - boundingRect.left) * scaleX
+    const canvasTop = (event.clientY - boundingRect.top) * scaleY
+    const row = Math.min(Math.floor(canvasTop / cellSpace), rows - 1)
+    const col = Math.min(Math.floor(canvasLeft / cellSpace), cols - 1)
+    // universe.toggle_cell(row, col)
+    context.fillStyle = colorAlive
+    const x = col * cellSpace + 1
+    const y = row * cellSpace + 1
+    context.fillRect(x, y, cellSpace, cellSpace)
+  }
 }
 
 const Board = ({
@@ -73,7 +87,7 @@ const Board = ({
   rows,
   cols,
   toroide,
-  backgroundColor,
+  backgroundColor
 }: {
   stateCellSize: any
   isRunning: boolean
@@ -88,7 +102,7 @@ const Board = ({
   }, [reload, rows, cols, toroide])
 
   useEffect(() => {
-		console.log(backgroundColor);
+    console.log(backgroundColor)
     colorDead = backgroundColor
     reloadBoard()
   }, [backgroundColor])
