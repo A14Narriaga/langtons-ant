@@ -1,4 +1,4 @@
-# React app with Rust using WebAssembly
+## React app with Rust using WebAssembly
 - [Install npm](https://www.npmjs.com/get-npm)
 - [Install cargo](https://doc.rust-lang.org/cargo/getting-started/installation.html)
 
