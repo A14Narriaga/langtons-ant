@@ -3,17 +3,20 @@ import { GiAnt } from "react-icons/gi"
 import { IoClose } from "react-icons/io5"
 import { ToastContainer, toast } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
+import Ant from "../interfaces/Ant"
 
 const AddAnt = ({
+  setAnts,
   setShowAddAnt,
   rows,
   cols,
-	backgroundColor
+  backgroundColor,
 }: {
+  setAnts: any
   setShowAddAnt: any
   rows: number
   cols: number
-	backgroundColor: string
+  backgroundColor: string
 }) => {
   const [color, setColor] = useState("black")
   const [x, setX] = useState(0)
@@ -21,15 +24,24 @@ const AddAnt = ({
   const [position, setPosition] = useState("0")
 
   const saveInfo = () => {
-    if (!(x > 0 && x < rows+1)) {
+    if (!(x > 0 && x < rows + 1)) {
       toast.error(`X value ​​must be greater than 0 and less than ${rows}`)
       return
     }
-    if (!(y > 0 && y < cols+1)) {
+    if (!(y > 0 && y < cols + 1)) {
       toast.error(`Col value ​​must be greater than 0 and less than ${color}`)
       return
     }
-		setShowAddAnt(false)
+    setAnts((ants: Array<Ant>) => [
+      ...ants,
+      {
+        x: x,
+        y: y,
+        pos: getAntPos(),
+        color: color,
+      },
+    ])
+    setShowAddAnt(false)
   }
 
   const moveAnt = () => {
@@ -49,6 +61,19 @@ const AddAnt = ({
     }
   }
 
+  const getAntPos = () => {
+    switch (position) {
+      case "0":
+        return "UP"
+      case "-90deg":
+        return "LEFT"
+      case "-180deg":
+        return "DOWN"
+      case "-270deg":
+        return "RIGHT"
+    }
+  }
+
   return (
     <>
       <section className="add-ant">
@@ -58,7 +83,14 @@ const AddAnt = ({
           </section>
           <section className="config-ant">
             <button className="space config-position-ant" onClick={moveAnt}>
-              <GiAnt id="ant" style={{ transform: `rotate(${position})`, color: color, backgroundColor: backgroundColor}} />
+              <GiAnt
+                id="ant"
+                style={{
+                  transform: `rotate(${position})`,
+                  color: color,
+                  backgroundColor: backgroundColor,
+                }}
+              />
             </button>
             <input
               className="space"

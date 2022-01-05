@@ -1,6 +1,7 @@
 import { useEffect } from "react"
 import { memory } from "langtons-ant-algorithm/langtons_ant_algorithm_bg.wasm"
 import { Grid } from "langtons-ant-algorithm"
+import Ant from "../interfaces/Ant"
 
 const colorAlive = "#000000"
 const cols = 180
@@ -13,6 +14,8 @@ let canvas: HTMLCanvasElement
 let context: CanvasRenderingContext2D
 let board: Array<Array<number>>
 let grid: Grid
+
+const addAnt = (x: number, y: number) => grid.addAnt(x, y)
 
 const start = () => {
   grid.moveAnts()
@@ -46,7 +49,6 @@ const reloadBoard = () => {
 }
 
 const loadBoard = (rs: number, cs: number, toroide: boolean) => {
-  console.log(rs, cs, toroide, colorDead)
   grid = Grid.new(rows, cols)
   grid.addAnt(65, 90)
   canvas = document.getElementById("canvas") as HTMLCanvasElement
@@ -87,7 +89,8 @@ const Board = ({
   rows,
   cols,
   toroide,
-  backgroundColor
+  backgroundColor,
+  ants,
 }: {
   stateCellSize: any
   isRunning: boolean
@@ -96,13 +99,13 @@ const Board = ({
   cols: number
   toroide: boolean
   backgroundColor: string
+  ants: Array<Ant>
 }) => {
   useEffect(() => {
     loadBoard(rows, cols, toroide)
   }, [reload, rows, cols, toroide])
 
   useEffect(() => {
-    console.log(backgroundColor)
     colorDead = backgroundColor
     reloadBoard()
   }, [backgroundColor])
@@ -116,11 +119,21 @@ const Board = ({
     setInterval(() => start(), 1)
   }, [isRunning])
 
+  useEffect(() => {
+    console.log(ants)
+    if (ants.length > 0) {
+      const { x, y } = ants[ants.length - 1]
+      addAnt(x, y)
+    }
+  }, [ants])
+
+	// https://blog.koenvangilst.nl/react-hooks-with-canvas/
+
   return (
     <main>
       <section className="information">
         <ul>
-          <li>Ants: 1</li>
+          <li>Ants: {ants.length}</li>
           <li>Generation: 1959</li>
           <li>Cells: 10</li>
         </ul>

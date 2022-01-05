@@ -27,6 +27,8 @@ const App = () => {
   const [cols, setCols] = useState(20)
   const [toroide, setToroide] = useState(false)
   const [backgroundColor, setBackgroundColor] = useState("#c5c5c5")
+  const [ants, setAnts] = useState([])
+
   return (
     <>
       <Header
@@ -45,6 +47,7 @@ const App = () => {
         cols={cols}
         toroide={toroide}
         backgroundColor={backgroundColor}
+				ants={ants}
       />
       <Footer />
       {showConfig && (
@@ -60,7 +63,15 @@ const App = () => {
           setBackgroundColor={setBackgroundColor}
         />
       )}
-      {showAddAnt && <AddAnt setShowAddAnt={setShowAddAnt} rows={rows} cols={cols} backgroundColor={backgroundColor}/>}
+      {showAddAnt && (
+        <AddAnt
+          setAnts={setAnts}
+          setShowAddAnt={setShowAddAnt}
+          rows={rows}
+          cols={cols}
+          backgroundColor={backgroundColor}
+        />
+      )}
     </>
   )
 }
